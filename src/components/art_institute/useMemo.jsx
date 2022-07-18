@@ -19,7 +19,6 @@ const useMemo = () => {
  
   const filteredUsers = React.useMemo(
     () => users.filter((user) => {
-    console.log('eeeeeee',user)
     return user.name.toLowerCase().includes(search.toLowerCase());
   }),
   [search]

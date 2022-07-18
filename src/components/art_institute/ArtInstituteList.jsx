@@ -26,7 +26,6 @@ const ArtInstituteList=()=>{
   }
 
   const handlePageChange = (event, value) => {
-    console.log(value);
     setPage(value);
   };
 
@@ -41,7 +40,6 @@ const ArtInstituteList=()=>{
           {
             Header: 'Title',
             accessor: 'title',
-            // accessor is the "key" in the data
           },
           {
             id:'is_featured', 
@@ -72,7 +70,6 @@ const ArtInstituteList=()=>{
         rows,
         prepareRow,
         state: { globalFilter },
-        visibleColumns,
         preGlobalFilteredRows,
         setGlobalFilter
     } = useTable({ columns, data:users },useGlobalFilter,useSortBy)
